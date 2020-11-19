@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vim on MArxiv</title>
-    <link>/categories/vim/</link>
+    <link>https://mseok.github.io/categories/vim/</link>
     <description>Recent content in vim on MArxiv</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://mseok.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

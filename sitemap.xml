@@ -3,52 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/p/hello-world/</loc>
+    <loc>https://mseok.github.io/p/hello-world/</loc>
     <lastmod>2020-11-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://mseok.github.io/</loc>
     <lastmod>2020-11-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>https://mseok.github.io/post/</loc>
     <lastmod>2020-11-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/archives/</loc>
+    <loc>https://mseok.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/page/</loc>
+    <loc>https://mseok.github.io/page/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>https://mseok.github.io/about/</loc>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://mseok.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>/categories/paper-review/</loc>
+    <loc>https://mseok.github.io/categories/paper-review/</loc>
   </url>
   
   <url>
-    <loc>/search/</loc>
+    <loc>https://mseok.github.io/search/</loc>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://mseok.github.io/tags/</loc>
   </url>
   
   <url>
-    <loc>/categories/vim/</loc>
+    <loc>https://mseok.github.io/categories/vim/</loc>
   </url>
   
 </urlset>

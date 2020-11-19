@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on MArxiv</title>
-    <link>/post/</link>
+    <link>https://mseok.github.io/post/</link>
     <description>Recent content in Posts on MArxiv</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://mseok.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World!</title>
-      <link>/p/hello-world/</link>
+      <link>https://mseok.github.io/p/hello-world/</link>
       <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/p/hello-world/</guid>
+      <guid>https://mseok.github.io/p/hello-world/</guid>
       <description>Hello world!
 Hugo를 이용하여 만든 이 블로그의 첫 게시물입니다!</description>
     </item>
