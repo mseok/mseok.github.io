@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>MArxiv</title>
-    <link>http://mseok.github.io/</link>
-    <description>Recent content on MArxiv</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 14 Nov 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://mseok.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Hello World!</title>
-      <link>http://mseok.github.io/posts/hello-world/</link>
-      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://mseok.github.io/posts/hello-world/</guid>
-      <description>Hello World!
-My first blog post with Hugo.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>MArxiv</title>
+        <link>/</link>
+        <description>Recent content on MArxiv</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hello World!</title>
+        <link>/p/hello-world/</link>
+        <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/p/hello-world/</guid>
+        <description>&lt;p&gt;Hello world!&lt;/p&gt;
+&lt;p&gt;Hugo를 이용하여 만든 이 블로그의 첫 게시물입니다!&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

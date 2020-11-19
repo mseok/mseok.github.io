@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on MArxiv</title>
+    <link>/page/</link>
+    <description>Recent content in Pages on MArxiv</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archives</title>
+      <link>/archives/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description> KAIST 화학과 ACE-Team에서 석사 과정을 밟고 있는 대학원생입니다.
+  Drug discovery와 deep learning과 관련된 공부를 하고 있습니다. 코딩하는 것을 좋아하며, 코딩을 접한지 얼마되지 않아 배워가는 중입니다. Vim을 사랑하며, 주변 사람들에게 전파하고자 합니다. 키보드 덕후입니다.  연락이 필요하신 분들은 아래를 통해 연락해주세요.
+ mail Github  </description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/search/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
