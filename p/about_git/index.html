@@ -186,7 +186,7 @@
 		
 	</figure></li>
 </ul>
-<p>.git directory는 프로젝트의 모든 것들이 저장되는 곳을 말한다. 각 버전의 프로젝트들의 <strong>snapshot</strong>들이 암호화(SHA-1 hash) 되어 저장되어 있고, 프로젝트를 저장할 때 모든 파일들 각각을 암호화해서 저장한다. <strong>Working directory의 경우 .git directory에 있는 여러 가지 버전들 중 특정 버전을 보여주는 것 뿐이고, 우리는 이를 그 버전이 checkout된 상태라고 부른다.</strong> Staging area는 .git directory에 있다. 이는 단순한 파일이며 곧 commit할 파일들에 대한 정보를 저장한다. 이에 관한 자세한 정보들은 별도의 게시물에서 다루도록 하겠다. Figure 1에서 설명하는 git이 기본적으로 하는 일의 순서는 다음과 같다.</p>
+<p>.git directory는 프로젝트의 모든 것들이 저장되는 곳을 말한다. 각 버전의 프로젝트들이 <strong>snapshot</strong> 형태로 암호화(SHA-1 hash) 되어 저장되어 있고, 프로젝트를 저장할 때 모든 파일들 각각을 암호화해서 저장한다. <strong>Working directory의 경우 .git directory에 있는 여러 가지 버전들 중 특정 버전을 보여주는 것 뿐이고, 우리는 이를 그 버전이 checkout된 상태라고 부른다.</strong> Staging area는 .git directory에 있다. 이는 단순한 파일이며 곧 commit할 파일들에 대한 정보를 저장한다. 이에 관한 자세한 정보들은 별도의 게시물에서 다루도록 하겠다. Figure 1에서 설명하는 git이 기본적으로 하는 일의 순서는 다음과 같다.</p>
 <ol>
 <li>Working directory에서 파일을 수정한다.</li>
 <li>Staging Area에 파일을 Stage 해서 commit할 snapshot을 만든다. 모든 파일을 추가할 수도 있고 선택하여 추가할 수도 있다.</li>
