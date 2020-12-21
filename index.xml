@@ -31,21 +31,27 @@
 		&lt;a href=&#34;https://mseok.github.io/p/about_git/workingtree.jpg&#34; data-size=&#34;647x347&#34;&gt;
 			&lt;img srcset=&#34;https://mseok.github.io/p/about_git/workingtree_hu253a8073b9aa5725da25470ca7d3ad95_56103_480x0_resize_q75_box.jpg 480w, https://mseok.github.io/p/about_git/workingtree_hu253a8073b9aa5725da25470ca7d3ad95_56103_1024x0_resize_q75_box.jpg 1024w&#34;
 				src=&#34;https://mseok.github.io/p/about_git/workingtree.jpg&#34; width=&#34;647&#34; height=&#34;347&#34; loading=&#34;lazy&#34;
-				alt=&#34;Figure 1. Working tree structure of git&#34;&gt;
+				alt=&#34;Figure 1. The basic structures of git&#34;&gt;
 		&lt;/a&gt;
 		
-		&lt;figcaption&gt;Figure 1. Working tree structure of git&lt;/figcaption&gt;
+		&lt;figcaption&gt;Figure 1. The basic structures of git&lt;/figcaption&gt;
 		
 	&lt;/figure&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;.git directory는 프로젝트의 모든 것들이 저장되는 곳을 말한다. Working directory의 경우 .git directory에 있는 여러 가지 버전들 중 특정 버전을 checkout한 것이다. Staging area는 .git directory에 있다. 이는 단순한 파일이며 곧 commit할 파일들에 대한 정보를 저장한다. Figure 1에서 설명하는 git이 기본적으로 하는 일의 순서는 다음과 같다.&lt;/p&gt;
+&lt;p&gt;.git directory는 프로젝트의 모든 것들이 저장되는 곳을 말한다. 각 버전의 프로젝트들의 &lt;strong&gt;snapshot&lt;/strong&gt;들이 암호화(SHA-1 hash) 되어 저장되어 있고, 프로젝트를 저장할 때 모든 파일들 각각을 암호화해서 저장한다. &lt;strong&gt;Working directory의 경우 .git directory에 있는 여러 가지 버전들 중 특정 버전을 보여주는 것 뿐이고, 우리는 이를 그 버전이 checkout된 상태라고 부른다.&lt;/strong&gt; Staging area는 .git directory에 있다. 이는 단순한 파일이며 곧 commit할 파일들에 대한 정보를 저장한다. 이에 관한 자세한 정보들은 별도의 게시물에서 다루도록 하겠다. Figure 1에서 설명하는 git이 기본적으로 하는 일의 순서는 다음과 같다.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Working directory에서 파일을 수정한다.&lt;/li&gt;
-&lt;li&gt;Staging Area에 파일을 Stage 해서 커밋할 스냅샷을 만든다. 모든 파일을 추가할 수도 있고 선택하여 추가할 수도 있다.&lt;/li&gt;
-&lt;li&gt;Staging Area에 있는 파일들을 commit해서 .git directory에 영구적인 스냅샷으로 저장한다.&lt;/li&gt;
+&lt;li&gt;Staging Area에 파일을 Stage 해서 commit할 snapshot을 만든다. 모든 파일을 추가할 수도 있고 선택하여 추가할 수도 있다.&lt;/li&gt;
+&lt;li&gt;Staging Area에 있는 파일들을 commit해서 .git directory에 영구적인 snapshot을 저장한다.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;git-configuration&#34;&gt;Git configuration&lt;/h3&gt;
-&lt;p&gt;Git을 사용하는 것도 다른 프로그램들을 사용하는 것과 마찬가지로 설정들이 있다. Git은 특이하게도 &lt;code&gt;/etc/gitconfig&lt;/code&gt;, &lt;code&gt;~/.gitconfig (~/.config/git/config)&lt;/code&gt;, 그리고 &lt;code&gt;.git/config&lt;/code&gt; 세 가지 종류의 configuration파일을 사용한다. 이 세 가지 파일들은 역순으로 우선순위가 높으며, 따라서 local git repository에서의 설정은 &lt;code&gt;.git/config&lt;/code&gt; 의 설정이 다른 파일들에서 설정된 모든 설정을 덮어씌우게 된다. 몇 가지 기본적인 configuration들을 소개하겠다.&lt;/p&gt;
+&lt;p&gt;Git 또한 다른 프로그램들을 사용하는 것과 마찬가지로 설정들이 있다. Git은 아래와 같이 세 가지 종류의 configuration 파일을 사용하며, 이 세가지 파일들은 각각의 명령어로 읽고 쓸 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/etc/gitconfig&lt;/code&gt;&amp;lt;-&lt;code&gt;git config --system&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~/.gitconfig (~/.config/git/config)&lt;/code&gt;&amp;lt;-&lt;code&gt;git config --global&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.git/config&lt;/code&gt;&amp;lt;-&lt;code&gt;git config&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이 세 가지 파일들은 역순으로 우선순위가 높으며, 따라서 local git repository에서의 설정은 &lt;code&gt;.git/config&lt;/code&gt; 의 설정이 다른 파일들에서 설정된 모든 설정을 덮어씌우게 된다. 다음은 몇 가지 기본적인 configuration들이다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;사용자 정보&lt;/p&gt;
@@ -54,7 +60,7 @@
 &lt;li&gt;&lt;code&gt;git config user.email your_email&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;위의 두 가지 명령어로 local 환경에서 사용자의 이름과 이메일을 설정한다. 이렇게 설정한 이름과 이메일은 후에 pull, push를 할 때 user authentication 과정에서 쓰이게 된다.&lt;/p&gt;
-&lt;p&gt;간혹, git configuration이 되지 않았을 경우에 git을 사용하다 에러가 발생하면서 이름과 이메을 설정하라는 문구가 뜰 경우가 있다. &lt;strong&gt;이 때 공용서버를 사용할 경우 --global 옵션을 지양해야 한다.&lt;/strong&gt; --global 옵션은 두 번째 우선도를 가진 &lt;code&gt;~/.gitconfig&lt;/code&gt; 에 저장되며, 이게 저장되는 순간 local git repository의 &lt;code&gt;.git/config&lt;/code&gt; 파일에 이름과 이메일이 없어도 --global 옵션을 주어 저장된 이름과 이메일로 push 혹은 pull이 되기 때문에 누가 어떤 일을 하여 업데이트 한 것인지 구분하기가 어렵게 된다.&lt;/p&gt;
+&lt;p&gt;간혹, git configuration이 되지 않았을 경우에 git을 사용하다 에러가 발생하면서 이름과 이메을 설정하라는 문구가 뜨는 경우가 있다. &lt;strong&gt;이 때 공용서버를 사용할 경우 --global 옵션을 지양해야 한다.&lt;/strong&gt; --global 옵션은 두 번째 우선도를 가진 &lt;code&gt;~/.gitconfig&lt;/code&gt; 에 저장되며, 이게 저장되는 순간 local git repository의 &lt;code&gt;.git/config&lt;/code&gt; 파일에 이름과 이메일이 없어도 --global 옵션을 주어 저장된 이름과 이메일로 push 혹은 pull이 되기 때문에 누가 어떤 일을 하여 업데이트 한 것인지 구분하기가 어렵게 된다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;CRLF&lt;/p&gt;
