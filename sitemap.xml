@@ -3,17 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mseok.github.io/p/about_git/</loc>
-    <lastmod>2020-12-21T00:00:00+00:00</lastmod>
+    <loc>https://mseok.github.io/categories/</loc>
+    <lastmod>2020-12-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mseok.github.io/categories/git/</loc>
+    <lastmod>2020-12-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mseok.github.io/p/git_principle/</loc>
+    <lastmod>2020-12-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mseok.github.io/</loc>
-    <lastmod>2020-12-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mseok.github.io/post/</loc>
+    <lastmod>2020-12-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mseok.github.io/p/about_git/</loc>
     <lastmod>2020-12-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -37,10 +52,6 @@
   </url>
   
   <url>
-    <loc>https://mseok.github.io/categories/</loc>
-  </url>
-  
-  <url>
     <loc>https://mseok.github.io/categories/paper/</loc>
   </url>
   
@@ -50,10 +61,6 @@
   
   <url>
     <loc>https://mseok.github.io/tags/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mseok.github.io/categories/vim/</loc>
   </url>
   
 </urlset>

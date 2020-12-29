@@ -137,6 +137,14 @@
 
     <div class="article-details">
     
+    <header class="article-category">
+        
+            
+                <a href="/categories/git/">git</a>
+            
+        
+    </header>
+    
 
     <h2 class="article-title">
         <a href="/p/about_git/">Git의 개념과 설정</a>
@@ -160,39 +168,11 @@
 </header>
 
     <section class="article-content">
-    <blockquote>
-<p>이 게시물에서는 git의 개념과 기본적인 설정에 대해 소개하며, <a class="link" href="https://git-scm.com/book/ko"  target="_blank" rel="noopener"
-    >pro git</a>을 참고하였다.</p>
-</blockquote>
-<h2 id="git을-사용하는-이유">Git을 사용하는 이유</h2>
+    <h2 id="git을-사용하는-이유">Git을 사용하는 이유</h2>
 <p>코딩을 하거나, 디자인을 하는 사람들 혹은 글을 쓰는 사람들에게 가장 중요한 것 중 하나가 작업물들을 제때 <strong>백업</strong>시켜놓는 것이다. 하지만 일일이 작업을 할 때마다 작업한 날짜와 내용을 적어놓고 폴더를 복사하여 새로운 작업을 시작하는 일련의 과정들은 많은 자원들을 소모하며 <strong>귀찮다</strong>. 여러 사람들이 참여하는 공동 프로젝트를 관리하는 경우 데이터 백업의 문제가 더욱 복잡해진다. 이런 문제들을 한 번에 해결하기 위한 프로그램이 <strong>버전 관리 시스템(Version Control System, VCS)</strong> 이고, git은 가장 많이 쓰이는 버전 관리 시스템 중 하나이다.</p>
 <h2 id="git-vs-github">Git vs GitHub</h2>
 <p>Git과 GitHub는 전혀 다른 개념이기 때문에 혼동하면 안된다. Git은 앞서 말한 것처럼, local 환경에서 작업하는 것들을 아카이브화 해놓은 것이라고 생각하면 된다. 이 때, 작업에 대한 거의 모든 것, 이를 테면 작업을 한 사람, 날짜과 내용 모든 종류의 파일들을 추적하여 그 흔적들을 저장해둔다. 반면, GitHub는 단순히 Git에서 저장한 것들을 클라우드 서비스와 같이 올려놓아 저장하거나 공유할 수 있는 공간이다. 앞으로 알아볼 것들은 모두 Git에 관한 것이다.</p>
-<h2 id="git-기초">Git 기초</h2>
-<h3 id="git의-세가지-상태">Git의 세가지 상태</h3>
-<p><strong>Figure 1</strong>에서는 Git이 어떤 식으로 관리되는지를 보여준다. Git에는 크게 세 가지 상태가 있다.</p>
-<ul>
-<li><strong>Committed</strong>: 데이터가 &ldquo;로컬&rdquo; 데이터베이스에 저장된 상태</li>
-<li><strong>Modified</strong>: 수정한 파일을 &ldquo;로컬&rdquo; 데이터베이스에 아직 commit하지 않은 상태</li>
-<li><strong>Staged</strong>: 현재 수정한 파일을 곧 commit할 것이라고 표시한 상태
-<figure>
-		<a href="/p/about_git/workingtree.jpg" data-size="647x347">
-			<img srcset="/p/about_git/workingtree_hu253a8073b9aa5725da25470ca7d3ad95_56103_480x0_resize_q75_box.jpg 480w, /p/about_git/workingtree_hu253a8073b9aa5725da25470ca7d3ad95_56103_1024x0_resize_q75_box.jpg 1024w"
-				src="/p/about_git/workingtree.jpg" width="647" height="347" loading="lazy"
-				alt="Figure 1. The basic structures of git">
-		</a>
-		
-		<figcaption>Figure 1. The basic structures of git</figcaption>
-		
-	</figure></li>
-</ul>
-<p>.git directory는 프로젝트의 모든 것들이 저장되는 곳을 말한다. 각 버전의 프로젝트들이 <strong>snapshot</strong> 형태로 암호화(SHA-1 hash) 되어 저장되어 있고, 프로젝트를 저장할 때 모든 파일들 각각을 암호화해서 저장한다. <strong>Working directory의 경우 .git directory에 있는 여러 가지 버전들 중 특정 버전을 보여주는 것 뿐이고, 우리는 이를 그 버전이 checkout된 상태라고 부른다.</strong> Staging area는 .git directory에 있다. 이는 단순한 파일이며 곧 commit할 파일들에 대한 정보를 저장한다. 이에 관한 자세한 정보들은 별도의 게시물에서 다루도록 하겠다. Figure 1에서 설명하는 git이 기본적으로 하는 일의 순서는 다음과 같다.</p>
-<ol>
-<li>Working directory에서 파일을 수정한다.</li>
-<li>Staging Area에 파일을 Stage 해서 commit할 snapshot을 만든다. 모든 파일을 추가할 수도 있고 선택하여 추가할 수도 있다.</li>
-<li>Staging Area에 있는 파일들을 commit해서 .git directory에 영구적인 snapshot을 저장한다.</li>
-</ol>
-<h3 id="git-configuration">Git configuration</h3>
+<h2 id="git-configuration">Git configuration</h2>
 <p>Git 또한 다른 프로그램들을 사용하는 것과 마찬가지로 설정들이 있다. Git은 아래와 같이 세 가지 종류의 configuration 파일을 사용하며, 이 세가지 파일들은 각각의 명령어로 읽고 쓸 수 있다.</p>
 <ul>
 <li><code>/etc/gitconfig</code>&lt;-<code>git config --system</code></li>
@@ -244,6 +224,26 @@
     <aside class="related-contents--wrapper">
     
     
+        <h2 class="section-title">related Contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="" style="height:50px">
+    <a href="/p/git_principle/">
+        
+        
+
+        <div class="article-details" style="justify-content:center">
+            <h2 class="article-title">Git의 원리</h2>
+        </div>
+    </a>
+</article>
+
+                
+            </div>
+        </div>
+    
 </aside>
 
 
@@ -251,30 +251,14 @@
         
     
 
-    <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-  });
-  MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script> 
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+    crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+    onload="renderMathInElement(document.querySelector(`.article-content`));"></script>
 
     <footer class="site-footer">
     <section class="copyright">&copy; 2020 MArxiv</section>

@@ -5,22 +5,23 @@
     <link>https://mseok.github.io/categories/</link>
     <description>Recent content in Categories on MArxiv</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://mseok.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://mseok.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git</title>
+      <link>https://mseok.github.io/categories/git/</link>
+      <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://mseok.github.io/categories/git/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Paper</title>
       <link>https://mseok.github.io/categories/paper/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mseok.github.io/categories/paper/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vim</title>
-      <link>https://mseok.github.io/categories/vim/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mseok.github.io/categories/vim/</guid>
       <description></description>
     </item>
     
