@@ -1,1 +1,116 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mseok</title>
+    <style>
+        body {
+            font-family: Trebuchet MS, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            max-width: 800px;
+        }
+        h1 {
+            color: #333;
+        }
+        section {
+            padding: 20px;
+        }
+        .profile-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .publications-element p {
+            margin: 2px 0; /* Adjust the margin as per your preference */
+        }
+        .awards-element p {
+            margin: 2px 0; /* Adjust the margin as per your preference */
+        }
+        @media only screen and (max-width: 800px) {
+            .container {
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/Users/mseok/Downloads/Profile.jpg" alt="Profile Picture" class="profile-image">
+        <h1>Seokhyun Moon</h1>
+        <p>Ph.D. Candidate in KAIST Chemistry</p>
+        <p><a href="mailto:mshmjp@kaist.ac.kr">mshmjp@kaist.ac.kr</a>, <a href="mailto:mshmjp02@gmail.com">mshmjp02@gmail.com</a></p>
+        <p><a href="https://scholar.google.com/citations?hl=ko&user=U1j8Ip8AAAAJ">Scholar</a> | <a href="https://www.linkedin.com/in/seokhyun-moon-a9229722b/">Linkedin</a> | <a href="https://github.com/mseok">Github</a> </p>
+    </header>
+
+    <div class="container">
+      <section id="about">
+          <h2>About Me</h2>
+          <p>Hi, I am a graduate student at KAIST Chemistry, advised by Prof. Woo Youn Kim. I am interested computer-aided drug discovery, especially in protein-ligand interaction prediction using deep learning and generative modeling of small molecules as drugs. Starting from the physics-informed deep learning, my focus currently lies in the protein-ligand interaction modeling as a data-driven end-to-end process.</p>
+      </section>
+
+      <section id="publications">
+          <h2>Publications</h2>
+
+          <div class="publications-element">
+              <p><strong>PIGNet2: A Versatile Deep Learning-based Protein-Ligand Interaction Prediction Model for Binding Affinity Scoring and Virtual Screening</strong></p>
+              <p><u>Seokhyun Moon*</u>, Sang-Yeon Hwang, Jaechang Lim, and Woo Youn Kim<span>&#8224;</span></p>
+              <p>Under review</p>
+              <p><a href="https://arxiv.org/abs/2307.01066">Paper</a> | <a href="https://github.com/mseok/pignet2">Code</a></p>
+          </div>
+          <p></p>
+
+          <div class="publications-element">
+              <p><strong>GeoTMI: Predicting Quantum Chemical Property with Easy-to-Obtain Geometry via Positional Denoising</strong></p>
+              <p>Hyeonsu Kim*, Jeheon Woo*, Seonghwan Kim*, <u>Seokhyun Moon</u>*, Junhyung Kim*, and Woo Youn Kim<span>&#8224;</span></p>
+              <p>NeurIPS, 2023</p>
+              <p><a href="https://arxiv.org/abs/2304.03724">Paper</a> | <a href="https://github.com/Imfinethankyou1/GeoTMI">Code</a></p>
+          </div>
+          <p></p>
+
+          <div class="publications-element">
+              <p><strong>PIGNet: a physics-informed deep learning model toward generalized drug-target interaction prediction</strong></p>
+              <p><u>Seokhyun Moon*</u>, Wonho Zhung*, Soojung Yang*, Jaechang Lim, and Woo Youn Kim<span>&#8224;</span></p>
+              <p>Chemical Science, 2022</p>
+              <p><a href="https://doi.org/10.1039/D1SC06946B">Paper</a> | <a href="https://github.com/ace-kaist/pignet">Code</a></p>
+          </div>
+          <p></p>
+
+          <div class="publications-element">
+              <p><strong>Scaffold-based molecular design with a graph generative model</strong></p>
+              <p>Jaechang Lim*, Sang-Yeon Hwang*, <u>Seokhyun Moon</u>, Seungsu Kim, and Woo Youn Kim<span>&#8224;</span></p>
+              <p>Chemical Science, 2020</p>
+              <p><a href="https://pubs.rsc.org/en/content/articlelanding/2020/sc/c9sc04503a">Paper</a> | <a href="https://github.com/jaechanglim/GGM">Code</a></p>
+          </div>
+      </section>
+
+      <section id="awards">
+          <h2>Awards</h2>
+          <div class="awards-element">
+              <p><strong>Recipient</strong>, 10th EDISON Computational Chemistry software application competition</p>
+          </div>
+
+          <div class="awards-element">
+              <p><strong>Recipient</strong>, KAIST Undergraduate Research Program participaiton prize</p>
+          </div>
+
+          <div class="awards-element">
+              <p><strong>Recipient</strong>, Qualcomm-KAIST Innovation Awards 2019</p>
+          </div>
+      </section>
+    </div>
+
+    <footer>
+    </footer>
+</body>
+</html>
