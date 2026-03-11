@@ -1,0 +1,22 @@
+navbar_entries:
+  - title: research
+    url: /#research
+
+  - title: publications
+    url: /#publications
+
+  - title: blog
+    url: /blog/
+
+  - title: cv
+    url: https://drive.google.com/file/d/12OB_B7QWBLEFqM1p2qBWAxqZsP5dQxw3/view?usp=sharing
+
+footer_entries:
+  - title: scholar
+    url: https://scholar.google.com/citations?hl=ko&user=U1j8Ip8AAAAJ
+
+  - title: github
+    url: https://github.com/mseok
+
+  - title: linkedin
+    url: https://www.linkedin.com/in/seokhyun-moon-a9229722b/

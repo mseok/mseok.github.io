@@ -1,0 +1,15 @@
+<ul class="horizontal-list">
+  {% for item in include.collection %}
+    <li>
+      {% if item.url contains '://' or item.url contains 'mailto:' %}
+        <a href="{{ item.url }}" rel="noreferrer">
+          {{ item.title }}
+        </a>
+      {% else %}
+        <a href="{{ item.url | relative_url }}">
+          {{ item.title }}
+        </a>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

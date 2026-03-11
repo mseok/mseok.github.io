@@ -1,0 +1,177 @@
+.hero-shell {
+  margin: 1.8rem 0 2.3rem;
+}
+
+.hero-main {
+  display: grid;
+  grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  justify-items: start;
+}
+
+.hero-copy {
+  min-width: 0;
+  width: 100%;
+  align-self: center;
+}
+
+.hero-name {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 0.95;
+}
+
+.hero-role {
+  margin: 0.45rem 0 0.75rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.hero-role a {
+  color: inherit;
+}
+
+.hero-role-sep {
+  margin: 0 0.35rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.7rem;
+  font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.hero-lead {
+  margin: 0.2rem 0 0;
+  max-width: 58ch;
+  font-size: 1.04rem;
+}
+
+.hero-note {
+  margin: 0.8rem 0 0;
+  color: var(--text-secondary);
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.72rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--panel-bg);
+  text-decoration: none;
+  font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
+  font-size: 0.88rem;
+  line-height: 1.2;
+}
+
+.contact-pill:hover,
+.contact-pill:focus-visible {
+  background: var(--bg-secondary);
+  text-decoration: none;
+}
+
+.profile-avatar {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 14px 28px rgba(10, 26, 39, 0.08);
+  justify-self: start;
+}
+
+.home-section {
+  margin: 2.75rem 0 0;
+  padding-top: 0.25rem;
+  max-width: 820px;
+}
+
+.home-section h2 {
+  margin: 0 0 1rem;
+}
+
+.home-section p {
+  max-width: none;
+}
+
+.home-section-compact {
+  margin-top: 2.25rem;
+}
+
+.research-list,
+.meta-list {
+  margin: 1rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.publication-list {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.publication-item {
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.publication-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.publication-item h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.08rem;
+  line-height: 1.25;
+}
+
+.publication-item p {
+  margin: 0.18rem 0;
+}
+
+.home-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 920px) {
+  .hero-main {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .profile-avatar {
+    max-width: 180px;
+  }
+
+  .hero-role {
+    margin-bottom: 0.65rem;
+  }
+
+  .home-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-avatar {
+    aspect-ratio: 1 / 1;
+  }
+}

@@ -1,0 +1,57 @@
+name: Deploy Preview
+
+on:
+  push:
+    branches:
+      - codex/moonwalk-jekyll-migration
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-preview
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout source repo
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.10
+          bundler: 2.5.23
+          bundler-cache: true
+
+      - name: Check preview token
+        env:
+          PREVIEW_REPO_TOKEN: ${{ secrets.PREVIEW_REPO_TOKEN }}
+        run: |
+          if [ -z "${PREVIEW_REPO_TOKEN}" ]; then
+            echo "::error::Missing PREVIEW_REPO_TOKEN secret."
+            exit 1
+          fi
+
+      - name: Build preview site
+        run: bundle exec jekyll build --config _config.yml,_config.preview.yml
+
+      - name: Publish static preview
+        env:
+          PREVIEW_REPO_TOKEN: ${{ secrets.PREVIEW_REPO_TOKEN }}
+          PREVIEW_REPO: mseok/mseok-preview
+        run: |
+          touch _site_preview/.nojekyll
+          cd _site_preview
+
+          git init
+          git checkout -b main
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Deploy preview from ${GITHUB_SHA}"
+          git remote add origin "https://x-access-token:${PREVIEW_REPO_TOKEN}@github.com/${PREVIEW_REPO}.git"
+          git push --force origin main

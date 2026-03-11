@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+BUNDLER_VERSION="2.5.23"
+
+cd "$ROOT_DIR"
+mise trust -y "$ROOT_DIR" >/dev/null 2>&1 || true
+mise exec -- bundle "_${BUNDLER_VERSION}_" exec jekyll serve --livereload --trace "$@"

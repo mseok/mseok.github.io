@@ -1,0 +1,29 @@
+<p class="post-date text-bold">
+  {% if page.author %}
+    <span class="text-upcase">{{ page.author }}</span>
+    {% if page.date %}
+      /
+    {% endif %}
+  {% endif %}
+  {% if page.date %}
+    <span class="text-upcase">{{ page.date | date: '%B %Y' }}</span>
+  {% endif %}
+
+  {% if site.theme_config.show_reading_time == true %}
+    {% capture words %}
+      {{ content | number_of_words | minus: 180 }}
+    {% endcapture %}
+    {% unless words contains '-' %}
+      {{ words | strip | prepend: ' (' | append: ' words, ' }}
+      {{ words | plus: 180 | divided_by: 180 | append: ' min)' }}
+    {% endunless %}
+  {% endif %}
+</p>
+
+{% if site.theme_config.show_tags == true and page.tags %}
+  <div>
+    {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+{% endif %}
