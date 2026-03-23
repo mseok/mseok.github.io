@@ -131,6 +131,9 @@ html, body {
 
 body {
   background-image: var(--page-bg-image);
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
   position: relative;
 }
 
