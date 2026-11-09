@@ -11,13 +11,15 @@
 #         short, summary, contribution, selected (order in "Selected"),
 #         hidden (true keeps an entry off the page and the CV),
 #         cv.venues (list of label/text/url for the CV), cv.note,
-#         date ("YYYY-MM-DD", earliest public date among the listed venues;
-#         orders entries within a year, newest first; undated entries come first).
+#         date ("YYYY-MM-DD"). Entries are ordered by year, then by the date
+#         the title first became public (preprints included), newest first.
+#         scripts/scholar_sync.py finds that date in Crossref and arXiv; set
+#         date here only when the lookup cannot (OpenReview-only venues, titles
+#         that arXiv search misses). Undated entries lead their year.
 # In authors, "*" marks equal contribution and "†" a corresponding author,
 # as stated by the publisher, the paper or the owner's CV.
 
 "3fE2CSJIrl8C":
-  date: "2026-10-28"
   short: K-Fold
   title: Predicting conformational changes induced by biomolecular interactions
   authors: Yeongnam Bae, Jinheon Baek, Eugene Choi, …, Hyeongwoo Kim†, …, Seokhyun Moon, …, Woo Youn Kim†, Gyu Rie Lee, Byung-Ha Oh
@@ -46,7 +48,6 @@
         url: https://www.biorxiv.org/content/10.64898/2026.10.26.760299v1
 
 "8k81kl-MbHgC":
-  date: "2026-07-27"
   short: DeepBioisostere
   authors: Hyeongwoo Kim*, Seokhyun Moon*, Wonho Zhung, Shinwoo Kim, Jaechang Lim, Woo Youn Kim†
   selected: 2
@@ -66,7 +67,6 @@
         url: https://doi.org/10.1038/s41467-026-75512-9
 
 "Y0pCki6q_DkC":
-  date: "2023-12-12"
   short: PIGNet2
   title: "PIGNet2: A Versatile Deep Learning-based Protein-Ligand Interaction Prediction Model for Binding Affinity Scoring and Virtual Screening"
   authors: Seokhyun Moon, Sang-Yeon Hwang, Jaechang Lim, Woo Youn Kim†
@@ -87,7 +87,6 @@
         url: https://doi.org/10.1039/D3DD00149K
 
 "d1gkVwhDpl0C":
-  date: "2022-02-07"
   short: PIGNet
   title: "PIGNet: a physics-informed deep learning model toward generalized drug-target interaction prediction"
   authors: Seokhyun Moon*, Wonho Zhung*, Soojung Yang*, Jaechang Lim, Woo Youn Kim†
@@ -125,7 +124,6 @@
         url: https://www.biorxiv.org/content/10.64898/2026.09.06.749739v1
 
 "MXK_kJrjxJIC":
-  date: "2026-09-07"
   authors: Seonghwan Seo†, Hyeongwoo Kim, Seokhyun Moon, Woo Youn Kim†, Team KAIST
   links:
     - label: Paper
@@ -139,7 +137,6 @@
         url: https://www.biorxiv.org/content/10.64898/2026.09.04.749352v1
 
 "LkGwnXOMwfcC":
-  date: "2024-10-13"
   title: Discrete Diffusion Schrödinger Bridge Matching for Graph Transformation
   authors: Jun Hyeong Kim*, Seonghwan Kim*, Seokhyun Moon*, Hyeongwoo Kim*, Jeheon Woo*, Woo Youn Kim†
   venue: "ICLR 2025; NeurIPS 2024 Workshop: AI for New Drug Modalities"
@@ -158,7 +155,6 @@
         url: https://openreview.net/forum?id=p0KYWGpAHB
 
 "UebtZRa9Y70C":
-  date: "2026-01-26"
   authors: Joongwon Lee*, Seonghwan Kim*, Seokhyun Moon*, Hyunwoo Kim†, Woo Youn Kim†
   venue: ICLR 2026
   year: 2026
@@ -195,7 +191,6 @@
         url: https://openreview.net/forum?id=1fkPh6XTVe
 
 "WF5omc3nYNoC":
-  date: "2024-02-25"
   title: "Toward Generalizable Structure-Based Deep Learning Models for Protein-Ligand Interaction Prediction: Challenges and Strategies"
   authors: Seokhyun Moon*, Wonho Zhung*, Woo Youn Kim†
   venue: WIREs Computational Molecular Science
@@ -209,7 +204,7 @@
         url: https://doi.org/10.1002/wcms.1705
 
 "YsMSGLbcyi4C":
-  date: "2023-09-22"
+  date: "2023-03-28"
   title: "GeoTMI: Predicting Quantum Chemical Property with Easy-to-Obtain Geometry via Positional Denoising"
   authors: Hyeonsu Kim*, Jeheon Woo*, Seonghwan Kim*, Seokhyun Moon*, Jun Hyeong Kim*, Woo Youn Kim†
   venue: NeurIPS 2023
@@ -229,7 +224,6 @@
   hidden: true
 
 "9yKSN-GCB0IC":
-  date: "2019-12-03"
   authors: Jaechang Lim*, Sang-Yeon Hwang*, Seokhyun Moon, Seungsu Kim, Woo Youn Kim†
   venue: Chemical Science
   links:

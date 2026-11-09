@@ -7,56 +7,64 @@
       "title": "How Do Co-folding Models Organize Structural Information?",
       "authors": "M Park, S Kim, S Moon, H Kim, G Jeon, WY Kim",
       "venue": "bioRxiv",
-      "year": 2026
+      "year": 2026,
+      "date": "2026-09-08"
     },
     {
       "id": "MXK_kJrjxJIC",
       "title": "AtlasFold: Protein structure prediction with metagenomic-scale language models",
       "authors": "S Seo, H Kim, S Moon, WY Kim, Team KAIST",
       "venue": "bioRxiv",
-      "year": 2026
+      "year": 2026,
+      "date": "2026-09-07"
     },
     {
       "id": "8k81kl-MbHgC",
       "title": "Autonomous bioisosteric replacement for multi-property optimization in drug design",
       "authors": "H Kim, S Moon, W Zhung, S Kim, J Lim, WY Kim",
       "venue": "Nature Communications",
-      "year": 2026
+      "year": 2026,
+      "date": "2026-07-27"
     },
     {
       "id": "3fE2CSJIrl8C",
       "title": "Predicting conformational changes induced by biomolecular interactions",
       "authors": "Y Bae, J Baek, E Choi, JH Choi, H Han, H Jang, W Jeon, J Jo, D Kim, ...",
       "venue": "bioRxiv",
-      "year": 2026
+      "year": 2026,
+      "date": "2026-10-28"
     },
     {
       "id": "LkGwnXOMwfcC",
       "title": "Discrete diffusion schrödinger bridge matching for graph transformation",
       "authors": "JH Kim, S Kim, S Moon, H Kim, J Woo, WY Kim",
       "venue": "International Conference on Learning Representations",
-      "year": 2025
+      "year": 2025,
+      "date": "2024-10-02"
     },
     {
       "id": "UebtZRa9Y70C",
       "title": "FragFM: Hierarchical Framework for Efficient Molecule Generation via Fragment-Level Discrete Flow Matching",
       "authors": "J Lee, S Kim, S Moon, H Kim, WY Kim",
       "venue": "arXiv",
-      "year": 2025
+      "year": 2025,
+      "date": "2025-02-19"
     },
     {
       "id": "Y0pCki6q_DkC",
       "title": "PIGNet2: a versatile deep learning-based protein–ligand interaction prediction model for binding affinity scoring and virtual screening",
       "authors": "S Moon, SY Hwang, J Lim, WY Kim",
       "venue": "Digital Discovery",
-      "year": 2024
+      "year": 2024,
+      "date": "2023-07-03"
     },
     {
       "id": "WF5omc3nYNoC",
       "title": "Toward generalizable structure‐based deep learning models for protein–ligand interaction prediction: Challenges and strategies",
       "authors": "S Moon, W Zhung, WY Kim",
       "venue": "Wiley Interdisciplinary Reviews: Computational Molecular Science",
-      "year": 2024
+      "year": 2024,
+      "date": "2024-02-25"
     },
     {
       "id": "YsMSGLbcyi4C",
@@ -77,14 +85,16 @@
       "title": "PIGNet: a physics-informed deep learning model toward generalized drug–target interaction predictions",
       "authors": "S Moon, W Zhung, S Yang, J Lim, WY Kim",
       "venue": "Chemical Science",
-      "year": 2022
+      "year": 2022,
+      "date": "2020-08-22"
     },
     {
       "id": "9yKSN-GCB0IC",
       "title": "Scaffold-based molecular design with a graph generative model",
       "authors": "J Lim, SY Hwang, S Moon, S Kim, WY Kim",
       "venue": "Chemical science",
-      "year": 2020
+      "year": 2020,
+      "date": "2019-12-03"
     },
     {
       "id": "hqOjcs7Dif8C",

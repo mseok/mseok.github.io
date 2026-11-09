@@ -50,7 +50,7 @@ entries = scholar["publications"].each_with_index.map do |pub, index|
   parts += plain.map { |v| "\\href{#{url(v['url'])}}{#{tex(v['text'])}}" }
   code = links.find { |l| l["label"] == "Code" }
   parts << "\\href{#{url(code['url'])}}{Code}" if code
-  { year: o["year"] || pub["year"], date: o["date"], index: index, title: o["title"] || pub["title"],
+  { year: o["year"] || pub["year"], date: o["date"] || pub["date"], index: index, title: o["title"] || pub["title"],
     authors: o["authors"] || pub["authors"], note: (o["cv"] || {})["note"],
     venue_line: parts.reject(&:empty?).join(" | ") }
 end.compact

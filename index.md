@@ -103,7 +103,7 @@ title: Home
       {%- assign o = site.data.publications[p.id] -%}
       {%- unless o.hidden == true -%}
         {%- assign py = o.year | default: p.year | default: 0 -%}
-        {%- assign pd = o.date | default: "9999-99-99" -%}
+        {%- assign pd = o.date | default: p.date | default: "9999-99-99" -%}
         {{ py | prepend: "0000" | slice: -4, 4 }}|{{ pd }}|{{ p.id }};
       {%- endunless -%}
     {%- endfor -%}
