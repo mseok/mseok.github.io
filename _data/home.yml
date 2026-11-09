@@ -2,6 +2,9 @@ navbar_entries:
   - title: research
     url: /#research
 
+  - title: selected
+    url: /#selected
+
   - title: publications
     url: /#publications
 

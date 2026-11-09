@@ -1,0 +1,47 @@
+name: Sync Google Scholar
+
+# Weekly, model-free refresh of _data/scholar.json from the public Scholar
+# profile. Commits only when the publication list changed.
+
+on:
+  schedule:
+    - cron: "23 21 * * 0" # Mondays 06:23 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: scholar-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Scholar profile
+        run: python3 scripts/scholar_sync.py --user U1j8Ip8AAAAJ --out _data/scholar.json
+
+      - name: Commit changes
+        id: commit
+        run: |
+          if git diff --quiet -- _data/scholar.json; then
+            echo "No publication changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/scholar.json
+          git commit -m "Update publications from Google Scholar"
+          git push
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Request Pages build
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"

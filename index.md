@@ -3,35 +3,34 @@ layout: home
 title: Home
 ---
 
-<section class="hero-shell">
-  <div class="hero-main">
-    <img
-      src="{{ '/Profile.jpg' | relative_url }}"
-      alt="Seokhyun Moon"
-      class="profile-avatar"
-    />
+<section class="hero">
+  <img
+    src="{{ '/assets/img/profile.jpg' | relative_url }}"
+    alt="Seokhyun Moon"
+    class="profile-avatar"
+    width="560"
+    height="560"
+  />
 
-    <div class="hero-copy">
-      <h1 class="hero-name">Seokhyun Moon</h1>
-      <p class="hero-role">
-        Ph.D. Candidate, KAIST Chemistry
-        <span class="hero-role-sep">·</span>
-        <a href="https://wooyoun.kaist.ac.kr/" rel="noreferrer">
-          Intelligent Chemistry Lab
-        </a>
-      </p>
-      <p class="eyebrow">aidd / molecular docking / molecular generative models</p>
-      <p class="hero-lead">
-        I am a Ph.D. Candidate in KAIST Chemistry working on AI-driven drug
-        discovery. My recent work focuses on co-folding, molecular docking, and
-        molecular generative models, with an emphasis on reliable structure and
-        interaction modeling.
-      </p>
-      <p class="hero-note">
-        This site collects research notes, technical posts, and project logs.
-        Outside my core research, I am also increasingly interested in
-        AI agent-driven automation and productivity workflows.
-      </p>
+  <div class="hero-copy">
+    <h1 class="hero-name">Seokhyun Moon</h1>
+    <p class="hero-role">
+      Ph.D. Candidate, KAIST Chemistry
+      <span class="hero-role-sep">·</span>
+      <a href="https://wooyoun.kaist.ac.kr/" rel="noreferrer">Intelligent Chemistry Lab</a>
+    </p>
+    <p class="hero-lead">
+      I am a Ph.D. Candidate in KAIST Chemistry working on AI-driven drug
+      discovery. I build deep learning models for the structures and
+      interactions of biomolecular complexes, and I am now working on agentic
+      frameworks that go beyond single-target-based <em>in silico</em> drug
+      discovery.
+    </p>
+    <p class="hero-note">
+      This site collects research notes, technical posts, and project logs.
+      Outside my core research, I am also increasingly interested in
+      AI agent-driven automation and productivity workflows.
+    </p>
 
       <div class="link-row" aria-label="contact and profile links">
         <a class="contact-pill" href="mailto:mshmjp@kaist.ac.kr">KAIST Email</a>
@@ -41,129 +40,96 @@ title: Home
         <a class="contact-pill" href="https://www.linkedin.com/in/seokhyun-moon-a9229722b/">LinkedIn</a>
         <a class="contact-pill" href="https://drive.google.com/file/d/12OB_B7QWBLEFqM1p2qBWAxqZsP5dQxw3/view?usp=sharing">CV</a>
       </div>
-    </div>
   </div>
 </section>
 
 <section id="research" class="home-section">
   <h2>Research</h2>
   <p>
-    My research focuses on developing computational frameworks for understanding
-    and predicting molecular interactions. Building on PIGNet, a
-    physics-informed graph neural network for binding affinity estimation, I
-    have worked on structure and binding affinity prediction for diverse
-    biomolecular complexes. I am currently developing next-generation
-    foundation models for biomolecular complex structure prediction.
+    My research began with protein-ligand interaction prediction. In PIGNet
+    and PIGNet2, I developed physics-informed models for binding affinity
+    scoring and virtual screening, with a focus on generalization to unseen
+    systems. I then moved from scoring given structures to predicting the
+    structures themselves, working on co-folding and biomolecular complex
+    structure prediction, including K-Fold, where complex formation is modeled
+    as a transition from the unbound components to the bound state.
   </p>
   <p>
     In parallel, I am interested in molecular generative models for lead
-    optimization and <em>de novo</em> drug design, and more recently in
-    phenotypic drug discovery using virtual cells, where my previous work can be
-    effectively leveraged.
+    optimization and <em>de novo</em> drug design.
   </p>
-  <ul class="research-list">
+  <p>
+    More recently, I have been working on agentic frameworks that aim to
+    overcome the limitations of conventional single-target-based
+    <em>in silico</em> drug discovery, and I am also interested in phenotypic
+    drug discovery using virtual cells, where my previous work can be
+    effectively leveraged. MoAgent, a hypothesis-driven multi-agent framework
+    for drug mechanism-of-action discovery that I co-authored, is one example
+    of the agentic direction.
+  </p>
+  <ul class="topic-list">
     <li>Biomolecular complex structure prediction</li>
     <li>Co-folding and molecular docking</li>
     <li>Physics-informed and equivariant deep learning</li>
     <li>Molecular generative models for lead optimization</li>
+    <li>Agentic frameworks for drug discovery</li>
     <li>AI4Science infrastructure for reproducible research</li>
   </ul>
 </section>
 
+{%- assign pubs = site.data.scholar.publications -%}
+
+<section id="selected" class="home-section">
+  <h2>Selected</h2>
+  <div class="sel-grid">
+    {%- for n in (1..10) -%}
+      {%- for p in pubs -%}
+        {%- assign o = site.data.publications[p.id] -%}
+        {%- if o.selected == n -%}
+          {% include publication.html pub=p style="card" %}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  </div>
+</section>
+
 <section id="publications" class="home-section">
   <h2>Publications</h2>
-  <div class="publication-list">
-    <article class="publication-item">
-      <h3>FragFM: Hierarchical Framework for Efficient Molecule Generation via Fragment-Level Discrete Flow Matching</h3>
-      <p>Joongwon Lee, Seonghwan Kim, Seokhyun Moon, Hyunwoo Kim, and Woo Youn Kim</p>
-      <p>ICLR 2026</p>
-      <p><a href="https://arxiv.org/abs/2502.15805">Paper</a></p>
-    </article>
-
-    <article class="publication-item">
-      <h3>MoAgent: A Hypothesis-Driven Multi-Agent Framework for Drug Mechanism of Action Discovery</h3>
-      <p>Jun Hyeong Kim, Seokhyun Moon, Seonghwan Kim, Junhyeok Jeon, Taein Kim, Jisu Seo, Songmi Kim, and Woo Youn Kim</p>
-      <p>NeurIPS 2025 Workshop: AI4D3, FM4LS</p>
-      <p>
-        <a href="https://openreview.net/forum?id=XY9yFyi4GF">Paper (AI4D3)</a>
-        /
-        <a href="https://openreview.net/forum?id=1fkPh6XTVe">Paper (FM4LS)</a>
-      </p>
-    </article>
-
-    <article class="publication-item">
-      <h3>Discrete Diffusion Schrodinger Bridge Matching for Graph Transformation</h3>
-      <p>Jun Hyeong Kim, Seonghwan Kim, Seokhyun Moon, Hyeongwoo Kim, Jeheon Woo, and Woo Youn Kim</p>
-      <p>ICLR 2025, NeurIPS 2024 Workshop: AI for New Drug Modalities</p>
-      <p>
-        <a href="https://arxiv.org/abs/2410.01500">Paper</a>
-        /
-        <a href="https://github.com/junhkim1226/DDSBM.git">Code</a>
-      </p>
-    </article>
-
-    <article class="publication-item">
-      <h3>DeepBioisostere: Discovering Bioisosteres with Deep Learning for a Fine Control of Multiple Molecular Properties</h3>
-      <p>Hyeongwoo Kim, Seokhyun Moon, Wonho Zhung, and Woo Youn Kim</p>
-      <p>Under Review</p>
-      <p>
-        <a href="https://arxiv.org/abs/2403.02706">Paper</a>
-        /
-        <a href="https://github.com/Hwoo-Kim/DeepBioisostere.git">Code</a>
-      </p>
-    </article>
-
-    <article class="publication-item">
-      <h3>Toward Generalizable Structure-Based Deep Learning Models for Protein-Ligand Interaction Prediction: Challenges and Strategies</h3>
-      <p>Seokhyun Moon, Wonho Zhung, and Woo Youn Kim</p>
-      <p><em>WIREs Computational Molecular Science</em>, 2024</p>
-      <p><a href="https://doi.org/10.1002/wcms.1705">Paper</a></p>
-    </article>
-
-    <article class="publication-item">
-      <h3>PIGNet2: A Versatile Deep Learning-based Protein-Ligand Interaction Prediction Model for Binding Affinity Scoring and Virtual Screening</h3>
-      <p>Seokhyun Moon, Sang-Yeon Hwang, Jaechang Lim, and Woo Youn Kim</p>
-      <p><em>Digital Discovery</em>, 2024</p>
-      <p>
-        <a href="https://doi.org/10.1039/D3DD00149K">Paper</a>
-        /
-        <a href="https://github.com/mseok/pignet2">Code</a>
-      </p>
-    </article>
-
-    <article class="publication-item">
-      <h3>GeoTMI: Predicting Quantum Chemical Property with Easy-to-Obtain Geometry via Positional Denoising</h3>
-      <p>Hyeonsu Kim, Jeheon Woo, Seonghwan Kim, Seokhyun Moon, Jun Hyeong Kim, and Woo Youn Kim</p>
-      <p>NeurIPS, 2023</p>
-      <p>
-        <a href="https://openreview.net/forum?id=5JcKKRX2iH">Paper</a>
-        /
-        <a href="https://github.com/Imfinethankyou1/GeoTMI">Code</a>
-      </p>
-    </article>
-
-    <article class="publication-item">
-      <h3>PIGNet: a physics-informed deep learning model toward generalized drug-target interaction prediction</h3>
-      <p>Seokhyun Moon, Wonho Zhung, Soojung Yang, Jaechang Lim, and Woo Youn Kim</p>
-      <p><em>Chemical Science</em>, 2022</p>
-      <p>
-        <a href="https://doi.org/10.1039/D1SC06946B">Paper</a>
-        /
-        <a href="https://github.com/ace-kaist/pignet">Code</a>
-      </p>
-    </article>
-
-    <article class="publication-item">
-      <h3>Scaffold-based molecular design with a graph generative model</h3>
-      <p>Jaechang Lim, Sang-Yeon Hwang, Seokhyun Moon, Seungsu Kim, and Woo Youn Kim</p>
-      <p><em>Chemical Science</em>, 2020</p>
-      <p>
-        <a href="https://pubs.rsc.org/en/content/articlelanding/2020/sc/c9sc04503a">Paper</a>
-        /
-        <a href="https://github.com/jaechanglim/GGM">Code</a>
-      </p>
-    </article>
+  {%- assign this_year = site.time | date: "%Y" | plus: 0 -%}
+  {%- for y in (2015..this_year) reversed -%}
+    {%- capture items -%}
+      {%- for p in pubs -%}
+        {%- assign o = site.data.publications[p.id] -%}
+        {%- assign py = o.year | default: p.year -%}
+        {%- if py == y and o.hidden != true -%}
+          {% include publication.html pub=p style="row" %}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- assign items_text = items | strip -%}
+    {%- if items_text != "" %}
+  <div class="pub-year">
+    <h3>{{ y }}</h3>
+    <ul class="pub-list">{{ items }}</ul>
   </div>
+    {%- endif -%}
+  {%- endfor -%}
+  {%- capture undated -%}
+    {%- for p in pubs -%}
+      {%- assign o = site.data.publications[p.id] -%}
+      {%- assign py = o.year | default: p.year -%}
+      {%- if py == nil and o.hidden != true -%}
+        {% include publication.html pub=p style="row" %}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+  {%- assign undated_text = undated | strip -%}
+  {%- if undated_text != "" %}
+  <div class="pub-year">
+    <h3>Other</h3>
+    <ul class="pub-list">{{ undated }}</ul>
+  </div>
+  {%- endif %}
 </section>
 
 <section class="home-section home-section-compact">

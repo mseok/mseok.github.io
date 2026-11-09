@@ -1,0 +1,39 @@
+{%- comment -%}
+  One publication: Scholar fields from _data/scholar.json, overridden by
+  _data/publications.yml. include.style is "card" (Selected) or "row" (list).
+{%- endcomment -%}
+{%- assign p = include.pub -%}
+{%- assign o = site.data.publications[p.id] -%}
+{%- assign title = o.title | default: p.title -%}
+{%- assign authors = o.authors | default: p.authors | replace: "Seokhyun Moon", "<strong>Seokhyun Moon</strong>" | replace: "S Moon", "<strong>S Moon</strong>" -%}
+{%- assign venue = o.venue | default: p.venue -%}
+{%- assign year = o.year | default: p.year -%}
+{%- capture scholar_url -%}https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.scholar.profile }}&citation_for_view={{ site.data.scholar.profile }}:{{ p.id }}{%- endcapture -%}
+{%- if o.links -%}{%- assign main_url = o.links.first.url -%}{%- else -%}{%- assign main_url = scholar_url -%}{%- endif -%}
+{%- if include.style == "card" -%}
+<article class="sel-card">
+  <div class="sel-side">
+    <span class="sel-short">{{ o.short }}</span>
+    <span class="sel-venue">{{ venue }}{% unless venue contains year %} {{ year }}{% endunless %}</span>
+  </div>
+  <div class="sel-main">
+    <h3 class="sel-title"><a href="{{ main_url }}">{{ title }}</a></h3>
+    <p class="sel-authors">{{ authors }}</p>
+    {%- if o.summary %}
+    <p class="sel-summary">{{ o.summary }}</p>
+    {%- endif %}
+    {%- if o.contribution %}
+    <p class="sel-contrib"><span class="sel-contrib-label">My contribution</span>{{ o.contribution }}</p>
+    {%- endif %}
+    {%- if o.links %}
+    <p class="pub-links">{% for l in o.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</p>
+    {%- endif %}
+  </div>
+</article>
+{%- else -%}
+<li class="pub">
+  <a class="pub-title" href="{{ main_url }}">{{ title }}</a>
+  <span class="pub-authors">{{ authors }}</span>
+  <span class="pub-meta"><em>{{ venue }}</em>{% if o.links %}<span class="pub-links">{% for l in o.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</span>{% endif %}</span>
+</li>
+{%- endif -%}

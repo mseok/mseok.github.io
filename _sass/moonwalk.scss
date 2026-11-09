@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 html { height: 100%; }
 
 body {
-  font-family: "IBM Plex Sans", "Avenir Next", avenir, "Segoe UI", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, sans-serif;
   font-size: 1rem;
-  line-height: 1.85;
+  line-height: 1.7;
   margin: 0;
   min-height: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 pre, code {
@@ -16,7 +18,8 @@ pre, code {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Space Grotesk", "Avenir Next", sans-serif;
+  font-family: inherit;
+  letter-spacing: -0.01em;
   margin-top: 1.5em;
 }
 
@@ -71,43 +74,45 @@ img {
 
 @mixin light-appearance {
   html, body {
-    --bg: #f4f3ee;
-    --bg-secondary: #e7ece8;
-    --panel-bg: rgba(251, 250, 246, 0.82);
-    --headings: #0d2031;
-    --text: #253649;
-    --text-secondary: #617489;
-    --links: #0f7682;
+    --bg: #faf8f3;
+    --bg-secondary: #f1ede4;
+    --panel-bg: #ffffff;
+    --headings: #1d3a5f;
+    --text: #1f2933;
+    --text-secondary: #52606d;
+    --text-muted: #66727f;
+    --links: #2f4c7d;
+    --accent: #4c72b0;
     --highlight: #f3d97c;
-    --code-text: #0c5066;
-    --share-text: #7c8d9f;
-    --border: rgba(23, 47, 67, 0.16);
-    --border-strong: rgba(12, 32, 49, 0.34);
-    --page-bg-image: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
-    --page-grid-image:
-      linear-gradient(rgba(46, 87, 111, 0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(46, 87, 111, 0.07) 1px, transparent 1px);
-    --page-grid-opacity: 0.3;
+    --code-text: #2f4c7d;
+    --share-text: #66727f;
+    --border: rgba(31, 41, 51, 0.11);
+    --border-strong: rgba(31, 41, 51, 0.22);
+    --card-shadow: 0 1px 2px rgba(31, 41, 51, 0.04), 0 8px 24px rgba(31, 41, 51, 0.05);
+    --page-bg-image: none;
+    --page-grid-image: none;
+    --page-grid-opacity: 0;
   }
 }
 
 @mixin dark-appearance {
   html, body {
-    --headings: #d8e4ef;
-    --links: #79ccd6;
+    --headings: #dce6f2;
+    --links: #9dbbe6;
+    --accent: #8fb0e3;
     --highlight: #f3d97c;
-    --bg: #0a1018;
-    --bg-secondary: #111925;
-    --panel-bg: rgba(12, 18, 27, 0.92);
-    --text: #b0bfcc;
-    --text-secondary: #7f93a6;
-    --code-text: #8fd0de;
-    --share-text: #a9bac7;
-    --border: rgba(149, 188, 210, 0.14);
-    --border-strong: rgba(149, 188, 210, 0.24);
-    --page-bg-image:
-      radial-gradient(circle at top, rgba(83, 118, 140, 0.16), transparent 34%),
-      linear-gradient(180deg, rgba(10, 16, 24, 0.96), rgba(8, 12, 18, 1));
+    --bg: #12161c;
+    --bg-secondary: #1a2029;
+    --panel-bg: #181e26;
+    --text: #cfd6de;
+    --text-secondary: #9aa6b2;
+    --text-muted: #8a96a3;
+    --code-text: #9dbbe6;
+    --share-text: #9aa6b2;
+    --border: rgba(220, 230, 242, 0.10);
+    --border-strong: rgba(220, 230, 242, 0.20);
+    --card-shadow: none;
+    --page-bg-image: none;
     --page-grid-image: none;
     --page-grid-opacity: 0;
   }
@@ -307,7 +312,7 @@ ul {
 }
 
 ::selection {
-  background: rgba(15, 118, 130, 0.16);
+  background: rgba(76, 114, 176, 0.18);
 }
 
 @media (max-width: 640px) {

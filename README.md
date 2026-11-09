@@ -54,3 +54,18 @@ The workflow expects a repository secret named `PREVIEW_REPO_TOKEN` in `mseok.gi
 ## Production
 
 Production remains on the `main` branch until the staging site is approved. After approval, merge the migration branch into `main` and keep GitHub Pages serving from `main` `/`.
+
+## Publications and Google Scholar
+
+The home page renders publications from two data files:
+
+- `_data/scholar.json` is generated from the public Google Scholar profile by `scripts/scholar_sync.py` (Python standard library, no model calls). It is rewritten only when the list changes.
+- `_data/publications.yml` holds display overrides keyed by the Scholar article id: full author names, venue, year, links, `hidden`, and the `selected`, `short`, `summary` and `contribution` fields for the Selected section. Values here win over Scholar's.
+
+`.github/workflows/scholar-sync.yml` runs the script every Monday at 06:23 KST (and on manual dispatch), commits `_data/scholar.json` when it changed and requests a Pages build. A new Scholar entry appears on the page automatically with Scholar's own fields; add an override when its authors or venue need cleaning up. If Scholar answers with a bot check, the script exits with an error and leaves the data unchanged.
+
+Run it locally with:
+
+```bash
+python3 scripts/scholar_sync.py --user U1j8Ip8AAAAJ
+```
