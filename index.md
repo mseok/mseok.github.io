@@ -75,7 +75,7 @@ title: Home
 {%- assign pubs = site.data.scholar.publications -%}
 
 <section id="selected" class="home-section">
-  <h2>Selected</h2>
+  <h2>Selected Publications</h2>
   <div class="sel-grid">
     {%- for n in (1..10) -%}
       {%- for p in pubs -%}
