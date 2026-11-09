@@ -26,11 +26,6 @@ title: Home
       frameworks that go beyond single-target-based <em>in silico</em> drug
       discovery.
     </p>
-    <p class="hero-note">
-      This site collects research notes, technical posts, and project logs.
-      Outside my core research, I am also increasingly interested in
-      AI agent-driven automation and productivity workflows.
-    </p>
 
       <div class="link-row" aria-label="contact and profile links">
         <a class="contact-pill" href="mailto:mshmjp@kaist.ac.kr">KAIST Email</a>

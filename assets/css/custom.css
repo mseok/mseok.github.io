@@ -70,12 +70,6 @@ strong {
   border-top: 1px solid var(--border);
 }
 
-.sync-note {
-  margin: 0.6rem 0 0;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
 .credits {
   margin: 0.4rem 0 0;
   text-align: left;
@@ -150,13 +144,6 @@ strong {
   max-width: 62ch;
   font-size: 1.05rem;
   line-height: 1.7;
-}
-
-.hero-note {
-  margin: 0.65rem 0 0;
-  max-width: 62ch;
-  font-size: 0.93rem;
-  color: var(--text-muted);
 }
 
 .link-row {
@@ -480,25 +467,10 @@ strong {
   margin-bottom: 1.6rem;
 }
 
-.eyebrow {
-  margin: 0 0 0.6rem;
-  color: var(--accent);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 .page-title {
   margin: 0;
   font-size: clamp(2rem, 4vw, 2.6rem);
   line-height: 1.1;
-}
-
-.page-subtitle {
-  margin: 0.7rem 0 0;
-  max-width: 62ch;
-  color: var(--text-secondary);
 }
 
 .back-link {
