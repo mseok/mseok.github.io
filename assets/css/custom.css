@@ -10,7 +10,7 @@ html[data-theme="dark"], html[data-theme="dark"] body {
 }
 
 .w {
-  max-width: 860px;
+  max-width: 760px;
   padding: 2rem 1.5rem 3.5rem;
 }
 
@@ -201,10 +201,6 @@ strong {
   background: var(--border);
 }
 
-.home-section p {
-  max-width: 68ch;
-}
-
 /* Publications header with the Selected / All switch */
 
 .section-head {
@@ -325,12 +321,6 @@ strong {
 
 .sel-title a:hover {
   text-decoration: underline;
-}
-
-.home-section .sel-authors,
-.home-section .sel-summary,
-.home-section .sel-contrib {
-  max-width: none;
 }
 
 .sel-authors {
