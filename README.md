@@ -69,3 +69,11 @@ Run it locally with:
 ```bash
 python3 scripts/scholar_sync.py --user U1j8Ip8AAAAJ
 ```
+
+## CV
+
+`cv.pdf` is the CV from the private `mseok/AcademicCV` repository (synced with Overleaf). Its publication list, `publications.tex`, is generated from the same two data files by `scripts/cv_publications.rb` (Ruby standard library, no model calls), using the `cv.venues` and `cv.note` fields of `_data/publications.yml`; edit those fields here rather than `publications.tex`. The weekly job regenerates `publications.tex`, pushes it to AcademicCV when it changed, rebuilds the PDF with `latexmk -norc` and no shell escape whenever the AcademicCV source changed, and commits `cv.pdf` here. Edits made in Overleaf reach the PDF after Overleaf pushes them to GitHub; changes the job pushes to AcademicCV appear in Overleaf after "Pull GitHub changes into Overleaf".
+
+```bash
+ruby scripts/cv_publications.rb . ../AcademicCV/publications.tex
+```

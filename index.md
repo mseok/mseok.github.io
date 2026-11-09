@@ -33,7 +33,7 @@ title: Home
         <a class="contact-pill" href="https://scholar.google.com/citations?hl=ko&user=U1j8Ip8AAAAJ">Scholar</a>
         <a class="contact-pill" href="https://github.com/mseok">GitHub</a>
         <a class="contact-pill" href="https://www.linkedin.com/in/seokhyun-moon-a9229722b/">LinkedIn</a>
-        <a class="contact-pill" href="https://drive.google.com/file/d/12OB_B7QWBLEFqM1p2qBWAxqZsP5dQxw3/view?usp=sharing">CV</a>
+        <a class="contact-pill" href="{{ '/cv.pdf' | relative_url }}">CV</a>
       </div>
   </div>
 </section>
@@ -83,7 +83,7 @@ title: Home
       <button type="button" data-panel="all" aria-pressed="false">All</button>
     </div>
   </div>
-  <p class="pub-note"><sup>*</sup> Equal contribution</p>
+  <p class="pub-note"><sup>*</sup> Equal contribution &nbsp;·&nbsp; <sup>†</sup> Corresponding author</p>
 
   <div class="pub-panel sel-grid" data-panel="selected">
     {%- for n in (1..10) -%}
