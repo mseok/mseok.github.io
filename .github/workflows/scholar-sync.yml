@@ -1,11 +1,11 @@
 name: Sync Google Scholar
 
-# Weekly, model-free refresh of _data/scholar.json from the public Scholar
-# profile. Commits only when the publication list changed.
+# Manual, model-free refresh of _data/scholar.json from the public Scholar
+# profile. Commits only when the publication list changed. The weekly run
+# lives on the owner's Mac mini because Scholar answers GitHub-hosted runners
+# with HTTP 403 (run 42560435602, 2026-11-09).
 
 on:
-  schedule:
-    - cron: "23 21 * * 0" # Mondays 06:23 KST
   workflow_dispatch:
 
 permissions:

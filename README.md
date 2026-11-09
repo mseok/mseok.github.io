@@ -62,7 +62,7 @@ The home page renders publications from two data files:
 - `_data/scholar.json` is generated from the public Google Scholar profile by `scripts/scholar_sync.py` (Python standard library, no model calls). It is rewritten only when the list changes.
 - `_data/publications.yml` holds display overrides keyed by the Scholar article id: full author names, venue, year, links, `hidden`, and the `selected`, `short`, `summary` and `contribution` fields for the Selected section. Values here win over Scholar's.
 
-`.github/workflows/scholar-sync.yml` runs the script every Monday at 06:23 KST (and on manual dispatch), commits `_data/scholar.json` when it changed and requests a Pages build. A new Scholar entry appears on the page automatically with Scholar's own fields; add an override when its authors or venue need cleaning up. If Scholar answers with a bot check, the script exits with an error and leaves the data unchanged.
+The weekly run happens on the owner's own computer through a scheduled job (Mondays 06:23 KST): it pulls `main`, runs the script and commits and pushes `_data/scholar.json` only when it changed. Google Scholar answers GitHub-hosted runners with HTTP 403, so `.github/workflows/scholar-sync.yml` is kept for manual dispatch only. A new Scholar entry appears on the page automatically with Scholar's own fields; add an override when its authors or venue need cleaning up. If Scholar answers with a bot check, the script exits with an error and leaves the data unchanged.
 
 Run it locally with:
 

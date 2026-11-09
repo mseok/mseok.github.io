@@ -46,8 +46,9 @@ title: Home
     scoring and virtual screening, with a focus on generalization to unseen
     systems. I then moved from scoring given structures to predicting the
     structures themselves, working on co-folding and biomolecular complex
-    structure prediction, including K-Fold, where complex formation is modeled
-    as a transition from the unbound components to the bound state.
+    structure prediction. I am one of the main developers of K-Fold, which
+    models complex formation as a transition from the unbound components to
+    the bound state.
   </p>
   <p>
     In parallel, I am interested in molecular generative models for lead

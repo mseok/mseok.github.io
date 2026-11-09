@@ -23,12 +23,15 @@
     assembled state, so that interaction-induced conformational changes are
     part of the prediction.
   contribution: >-
-    I co-designed the diffusion bridge module and led its development,
-    proposed its modeling approach and training and inference strategies,
-    and analyzed the evaluation results.
+    As one of the main developers of K-Fold, I co-designed the diffusion
+    bridge module and led its development, proposed its modeling approach
+    and training and inference strategies, and analyzed the evaluation
+    results.
   links:
     - label: Paper
       url: https://www.biorxiv.org/content/10.64898/2026.10.26.760299v1
+    - label: Code
+      url: https://github.com/kaist-ai-bio/kfold
 
 "8k81kl-MbHgC":
   short: DeepBioisostere
@@ -85,6 +88,8 @@
   links:
     - label: Paper
       url: https://www.biorxiv.org/content/10.64898/2026.09.04.749352v1
+    - label: Code
+      url: https://github.com/SeonghwanSeo/atlasfold
 
 "LkGwnXOMwfcC":
   title: Discrete Diffusion Schrödinger Bridge Matching for Graph Transformation
@@ -103,6 +108,8 @@
   links:
     - label: Paper
       url: https://arxiv.org/abs/2502.15805
+    - label: Code
+      url: https://github.com/lee-jwon/FragFM
 
 "hqOjcs7Dif8C":
   authors: Jun Hyeong Kim, Seokhyun Moon, Seonghwan Kim, Junhyeok Jeon, Taein Kim, Jisu Seo, Songmi Kim, Woo Youn Kim
@@ -113,6 +120,8 @@
       url: https://openreview.net/forum?id=XY9yFyi4GF
     - label: FM4LS
       url: https://openreview.net/forum?id=1fkPh6XTVe
+    - label: Code
+      url: https://github.com/junhkim1226/MoAgent
 
 "WF5omc3nYNoC":
   title: "Toward Generalizable Structure-Based Deep Learning Models for Protein-Ligand Interaction Prediction: Challenges and Strategies"
