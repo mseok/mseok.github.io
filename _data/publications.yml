@@ -8,11 +8,13 @@
 # Fields: title, authors, venue, year, links (list of label/url),
 #         short, summary, contribution, selected (order in "Selected"),
 #         hidden (true keeps an entry off the page).
+# A "*" after a name marks equal contribution, as stated by the publisher or
+# the paper's first page.
 
 "3fE2CSJIrl8C":
   short: K-Fold
   title: Predicting conformational changes induced by biomolecular interactions
-  authors: Yeongnam Bae, Jinheon Baek, Eugene Choi, …, Seokhyun Moon, …, Woo Youn Kim, Gyu Rie Lee, Byung-Ha Oh (33 authors)
+  authors: Yeongnam Bae, Jinheon Baek, Eugene Choi, …, Seokhyun Moon, …, Woo Youn Kim, Gyu Rie Lee, Byung-Ha Oh
   selected: 1
   summary: >-
     Biomolecular interactions reshape protein structures in ways that matter
@@ -30,7 +32,7 @@
 
 "8k81kl-MbHgC":
   short: DeepBioisostere
-  authors: Hyeongwoo Kim, Seokhyun Moon, Wonho Zhung, Shinwoo Kim, Jaechang Lim, Woo Youn Kim
+  authors: Hyeongwoo Kim*, Seokhyun Moon*, Wonho Zhung, Shinwoo Kim, Jaechang Lim, Woo Youn Kim
   selected: 2
   summary: >-
     A deep generative model that performs bioisosteric replacement end to end,
@@ -60,7 +62,7 @@
 "d1gkVwhDpl0C":
   short: PIGNet
   title: "PIGNet: a physics-informed deep learning model toward generalized drug-target interaction prediction"
-  authors: Seokhyun Moon, Wonho Zhung, Soojung Yang, Jaechang Lim, Woo Youn Kim
+  authors: Seokhyun Moon*, Wonho Zhung*, Soojung Yang*, Jaechang Lim, Woo Youn Kim
   selected: 4
   summary: >-
     A physics-informed model that predicts binding affinity as a sum of
@@ -86,7 +88,7 @@
 
 "LkGwnXOMwfcC":
   title: Discrete Diffusion Schrödinger Bridge Matching for Graph Transformation
-  authors: Jun Hyeong Kim, Seonghwan Kim, Seokhyun Moon, Hyeongwoo Kim, Jeheon Woo, Woo Youn Kim
+  authors: Jun Hyeong Kim*, Seonghwan Kim*, Seokhyun Moon*, Hyeongwoo Kim*, Jeheon Woo*, Woo Youn Kim
   venue: "ICLR 2025; NeurIPS 2024 Workshop: AI for New Drug Modalities"
   links:
     - label: Paper
@@ -95,7 +97,7 @@
       url: https://github.com/junhkim1226/DDSBM
 
 "UebtZRa9Y70C":
-  authors: Joongwon Lee, Seonghwan Kim, Seokhyun Moon, Hyunwoo Kim, Woo Youn Kim
+  authors: Joongwon Lee*, Seonghwan Kim*, Seokhyun Moon*, Hyunwoo Kim, Woo Youn Kim
   venue: ICLR 2026
   year: 2026
   links:
@@ -114,7 +116,7 @@
 
 "WF5omc3nYNoC":
   title: "Toward Generalizable Structure-Based Deep Learning Models for Protein-Ligand Interaction Prediction: Challenges and Strategies"
-  authors: Seokhyun Moon, Wonho Zhung, Woo Youn Kim
+  authors: Seokhyun Moon*, Wonho Zhung*, Woo Youn Kim
   venue: WIREs Computational Molecular Science
   links:
     - label: Paper
@@ -122,7 +124,7 @@
 
 "YsMSGLbcyi4C":
   title: "GeoTMI: Predicting Quantum Chemical Property with Easy-to-Obtain Geometry via Positional Denoising"
-  authors: Hyeonsu Kim, Jeheon Woo, Seonghwan Kim, Seokhyun Moon, Jun Hyeong Kim, Woo Youn Kim
+  authors: Hyeonsu Kim*, Jeheon Woo*, Seonghwan Kim*, Seokhyun Moon*, Jun Hyeong Kim*, Woo Youn Kim
   venue: NeurIPS 2023
   links:
     - label: Paper
@@ -135,7 +137,7 @@
   hidden: true
 
 "9yKSN-GCB0IC":
-  authors: Jaechang Lim, Sang-Yeon Hwang, Seokhyun Moon, Seungsu Kim, Woo Youn Kim
+  authors: Jaechang Lim*, Sang-Yeon Hwang*, Seokhyun Moon, Seungsu Kim, Woo Youn Kim
   venue: Chemical Science
   links:
     - label: Paper

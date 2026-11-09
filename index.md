@@ -15,13 +15,13 @@ title: Home
   <div class="hero-copy">
     <h1 class="hero-name">Seokhyun Moon</h1>
     <p class="hero-role">
-      Ph.D. Candidate, KAIST Chemistry
+      InnoCORE Postdoctoral Researcher, KAIST
       <span class="hero-role-sep">·</span>
       <a href="https://wooyoun.kaist.ac.kr/" rel="noreferrer">Intelligent Chemistry Lab</a>
     </p>
     <p class="hero-lead">
-      I am a Ph.D. Candidate in KAIST Chemistry working on AI-driven drug
-      discovery. I build deep learning models for the structures and
+      I am an InnoCORE postdoctoral researcher at KAIST working on AI-driven
+      drug discovery. I build deep learning models for the structures and
       interactions of biomolecular complexes, and I am now working on agentic
       frameworks that go beyond single-target-based <em>in silico</em> drug
       discovery.
@@ -36,6 +36,18 @@ title: Home
         <a class="contact-pill" href="https://drive.google.com/file/d/12OB_B7QWBLEFqM1p2qBWAxqZsP5dQxw3/view?usp=sharing">CV</a>
       </div>
   </div>
+</section>
+
+<section id="news" class="home-section">
+  <h2>News</h2>
+  <ul class="news-list">
+    {%- for item in site.data.news %}
+    <li>
+      <span class="news-date">{{ item.date | date: "%b %Y" }}</span>
+      <span class="news-text">{{ item.text }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
 </section>
 
 <section id="research" class="home-section">
@@ -74,9 +86,17 @@ title: Home
 
 {%- assign pubs = site.data.scholar.publications -%}
 
-<section id="selected" class="home-section">
-  <h2>Selected Publications</h2>
-  <div class="sel-grid">
+<section id="publications" class="home-section">
+  <div class="section-head">
+    <h2>Publications</h2>
+    <div class="pub-toggle" role="group" aria-label="Publication list">
+      <button type="button" data-panel="selected" aria-pressed="true">Selected</button>
+      <button type="button" data-panel="all" aria-pressed="false">All</button>
+    </div>
+  </div>
+  <p class="pub-note"><sup>*</sup> Equal contribution</p>
+
+  <div class="pub-panel sel-grid" data-panel="selected">
     {%- for n in (1..10) -%}
       {%- for p in pubs -%}
         {%- assign o = site.data.publications[p.id] -%}
@@ -86,10 +106,8 @@ title: Home
       {%- endfor -%}
     {%- endfor -%}
   </div>
-</section>
 
-<section id="publications" class="home-section">
-  <h2>Publications</h2>
+  <div class="pub-panel" data-panel="all" hidden>
   {%- assign this_year = site.time | date: "%Y" | plus: 0 -%}
   {%- for y in (2015..this_year) reversed -%}
     {%- capture items -%}
@@ -125,7 +143,21 @@ title: Home
     <ul class="pub-list">{{ undated }}</ul>
   </div>
   {%- endif %}
+  </div>
 </section>
+
+<script>
+  document.querySelectorAll(".pub-toggle button").forEach(function (button) {
+    button.addEventListener("click", function () {
+      document.querySelectorAll(".pub-toggle button").forEach(function (other) {
+        other.setAttribute("aria-pressed", other === button ? "true" : "false");
+      });
+      document.querySelectorAll(".pub-panel").forEach(function (panel) {
+        panel.hidden = panel.dataset.panel !== button.dataset.panel;
+      });
+    });
+  });
+</script>
 
 <section class="home-section home-section-compact">
   <div class="home-meta-grid">

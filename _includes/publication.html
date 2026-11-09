@@ -5,7 +5,7 @@
 {%- assign p = include.pub -%}
 {%- assign o = site.data.publications[p.id] -%}
 {%- assign title = o.title | default: p.title -%}
-{%- assign authors = o.authors | default: p.authors | replace: "Seokhyun Moon", "<strong>Seokhyun Moon</strong>" | replace: "S Moon", "<strong>S Moon</strong>" -%}
+{%- assign authors = o.authors | default: p.authors | replace: "Seokhyun Moon", "<strong>Seokhyun Moon</strong>" | replace: "S Moon", "<strong>S Moon</strong>" | replace: "*", "<sup>*</sup>" -%}
 {%- assign venue = o.venue | default: p.venue -%}
 {%- if venue == "bioRxiv" or venue == "arXiv" or venue == "ChemRxiv" or venue == "medRxiv" -%}
   {%- assign venue = venue | append: " preprint" -%}
