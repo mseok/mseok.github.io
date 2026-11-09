@@ -63,14 +63,6 @@ title: Home
     for drug mechanism-of-action discovery that I co-authored, is one example
     of the agentic direction.
   </p>
-  <ul class="topic-list">
-    <li>Biomolecular complex structure prediction</li>
-    <li>Co-folding and molecular docking</li>
-    <li>Physics-informed and equivariant deep learning</li>
-    <li>Molecular generative models for lead optimization</li>
-    <li>Agentic frameworks for drug discovery</li>
-    <li>AI4Science infrastructure for reproducible research</li>
-  </ul>
 </section>
 
 {%- assign pubs = site.data.scholar.publications -%}

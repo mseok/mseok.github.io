@@ -205,24 +205,6 @@ strong {
   max-width: 68ch;
 }
 
-.topic-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin: 1.3rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.topic-list li {
-  margin: 0;
-  padding: 0.2rem 0.65rem;
-  border-radius: 6px;
-  background: var(--bg-secondary);
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-}
-
 /* Publications header with the Selected / All switch */
 
 .section-head {
