@@ -78,10 +78,13 @@
       url: https://github.com/ace-kaist/pignet
 
 "5nxA0vEk-isC":
-  authors: Minha Park, Shinwoo Kim, Seokhyun Moon, Hyeongwoo Kim, Gyuho Jeon, Woo Youn Kim
+  authors: Minha Park*, Shinwoo Kim*, Seokhyun Moon, Hyeongwoo Kim, Gyuho Jeon, Woo Youn Kim
+  venue: "bioRxiv preprint; ICML 2026 Workshop: GenBio"
   links:
     - label: Paper
       url: https://www.biorxiv.org/content/10.64898/2026.09.06.749739v1
+    - label: GenBio
+      url: https://openreview.net/forum?id=6RE3ehQV0a
 
 "MXK_kJrjxJIC":
   authors: Seonghwan Seo, Hyeongwoo Kim, Seokhyun Moon, Woo Youn Kim, Team KAIST
