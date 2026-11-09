@@ -38,18 +38,6 @@ title: Home
   </div>
 </section>
 
-<section id="news" class="home-section">
-  <h2>News</h2>
-  <ul class="news-list">
-    {%- for item in site.data.news %}
-    <li>
-      <span class="news-date">{{ item.date | date: "%b %Y" }}</span>
-      <span class="news-text">{{ item.text }}</span>
-    </li>
-    {%- endfor %}
-  </ul>
-</section>
-
 <section id="research" class="home-section">
   <h2>Research</h2>
   <p>

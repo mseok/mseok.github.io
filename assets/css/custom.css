@@ -223,30 +223,6 @@ strong {
   font-size: 0.85rem;
 }
 
-/* News */
-
-.news-list {
-  display: grid;
-  gap: 0.45rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.news-list li {
-  display: grid;
-  grid-template-columns: 5.5rem minmax(0, 1fr);
-  gap: 1rem;
-  margin: 0;
-  line-height: 1.6;
-}
-
-.news-date {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  font-variant-numeric: tabular-nums;
-}
-
 /* Publications header with the Selected / All switch */
 
 .section-head {
@@ -616,11 +592,6 @@ strong {
   .pub-year {
     grid-template-columns: 1fr;
     gap: 0.5rem;
-  }
-
-  .news-list li {
-    grid-template-columns: 1fr;
-    gap: 0;
   }
 
   .home-section:target {
