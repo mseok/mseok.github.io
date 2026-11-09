@@ -97,41 +97,39 @@ title: Home
   </div>
 
   <div class="pub-panel" data-panel="all" hidden>
-  {%- assign this_year = site.time | date: "%Y" | plus: 0 -%}
-  {%- for y in (2015..this_year) reversed -%}
-    {%- capture items -%}
-      {%- for p in pubs -%}
-        {%- assign o = site.data.publications[p.id] -%}
-        {%- assign py = o.year | default: p.year -%}
-        {%- if py == y and o.hidden != true -%}
-          {% include publication.html pub=p style="row" %}
-        {%- endif -%}
-      {%- endfor -%}
-    {%- endcapture -%}
-    {%- assign items_text = items | strip -%}
-    {%- if items_text != "" %}
-  <div class="pub-year">
-    <h3>{{ y }}</h3>
-    <ul class="pub-list">{{ items }}</ul>
-  </div>
-    {%- endif -%}
-  {%- endfor -%}
-  {%- capture undated -%}
+  {%- comment -%} Year, then date (newest first); undated entries lead their year. {%- endcomment -%}
+  {%- capture keys -%}
     {%- for p in pubs -%}
       {%- assign o = site.data.publications[p.id] -%}
-      {%- assign py = o.year | default: p.year -%}
-      {%- if py == nil and o.hidden != true -%}
-        {% include publication.html pub=p style="row" %}
-      {%- endif -%}
+      {%- unless o.hidden == true -%}
+        {%- assign py = o.year | default: p.year | default: 0 -%}
+        {%- assign pd = o.date | default: "9999-99-99" -%}
+        {{ py | prepend: "0000" | slice: -4, 4 }}|{{ pd }}|{{ p.id }};
+      {%- endunless -%}
     {%- endfor -%}
   {%- endcapture -%}
-  {%- assign undated_text = undated | strip -%}
-  {%- if undated_text != "" %}
-  <div class="pub-year">
-    <h3>Other</h3>
-    <ul class="pub-list">{{ undated }}</ul>
+  {%- assign keys = keys | strip | split: ";" | sort | reverse -%}
+  {%- assign current = "" -%}
+  {%- for key in keys -%}
+    {%- assign parts = key | strip | split: "|" -%}
+    {%- assign y = parts[0] -%}
+    {%- assign p = pubs | where: "id", parts[2] | first -%}
+    {%- if y != current -%}
+      {%- unless current == "" %}
+    </ul>
   </div>
-  {%- endif %}
+      {%- endunless %}
+  <div class="pub-year">
+    <h3>{% if y == "0000" %}Other{% else %}{{ y }}{% endif %}</h3>
+    <ul class="pub-list">
+      {%- assign current = y -%}
+    {%- endif -%}
+    {% include publication.html pub=p style="row" %}
+  {%- endfor -%}
+  {%- unless current == "" %}
+    </ul>
+  </div>
+  {%- endunless %}
   </div>
 </section>
 

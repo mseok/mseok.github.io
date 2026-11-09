@@ -50,12 +50,16 @@ entries = scholar["publications"].each_with_index.map do |pub, index|
   parts += plain.map { |v| "\\href{#{url(v['url'])}}{#{tex(v['text'])}}" }
   code = links.find { |l| l["label"] == "Code" }
   parts << "\\href{#{url(code['url'])}}{Code}" if code
-  { year: o["year"] || pub["year"], index: index, title: o["title"] || pub["title"],
+  { year: o["year"] || pub["year"], date: o["date"], index: index, title: o["title"] || pub["title"],
     authors: o["authors"] || pub["authors"], note: (o["cv"] || {})["note"],
     venue_line: parts.reject(&:empty?).join(" | ") }
 end.compact
 
-entries.sort_by! { |e| [-(e[:year] || 0), e[:index]] }
+# Year, then date (newest first); undated entries lead their year.
+undated = "9999-99-99"
+entries.sort! do |a, b|
+  [b[:year] || 0, b[:date] || undated, a[:index]] <=> [a[:year] || 0, a[:date] || undated, b[:index]]
+end
 
 body = entries.map do |e|
   note = e[:note] ? "\n\n                \\vspace{0.10 cm}\n                #{tex(e[:note])}" : ""
